@@ -16,16 +16,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
-app.use("/api/",apiMiddleware, privateroutes);
+app.use("/akshaya-web-backend/api/",apiMiddleware, privateroutes);
 
-app.use("/public/",public_router);
+app.use("/akshaya-web-backend/public/",public_router);
 
-app.get("/about", function(req, res) {
+app.get("akshaya-web-backend/about", function(req, res) {
     res.send("Hello World, How are you!");  
 });
 
 
-app.get("/", function(req, res) {  
+app.get("/akshaya-web-backend/", function(req, res) {  
    res.send("Hello World, How are you!");
 });
 
